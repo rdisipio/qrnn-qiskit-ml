@@ -75,7 +75,7 @@ if __name__ == '__main__':
     parser.add_argument('-H', '--hidden_dim', default=6, type=int)
     parser.add_argument('-Q', '--n_qubits', default=0, type=int)
     parser.add_argument('-e', '--n_epochs', default=300, type=int)
-    parser.add_argument('-B', '--backend', default='default.qubit')
+    parser.add_argument('-B', '--backend', default='statevector_simulator')
     args = parser.parse_args()
 
     print(f"Embedding dim:    {args.embedding_dim}")
