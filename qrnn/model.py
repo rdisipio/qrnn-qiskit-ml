@@ -73,6 +73,8 @@ class QLSTM(nn.Module):
             # match qubit dimension
             y_t = self.clayer_in(v_t)
 
+            print(">>>", y_t.size(), self.qlayer['forget'](y_t).size())
+
             f_t = torch.sigmoid(self.clayer_out(self.qlayer['forget'](y_t)))  # forget block
             i_t = torch.sigmoid(self.clayer_out(self.qlayer['input'](y_t)))  # input block
             g_t = torch.tanh(self.clayer_out(self.qlayer['update'](y_t)))  # update block
