@@ -29,5 +29,6 @@ setup(
     scripts=[
         'scripts/run.py',
         'scripts/train.py',
+        'scripts/train_pos.py',
         ],
 )
